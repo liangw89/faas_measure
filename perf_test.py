@@ -1,7 +1,7 @@
 from utils import *
 
 # the IPs of the perf servers for network tests
-SERVER_IPS = ["1.1.1.1", "2.2.2.2"]
+PERF_SERVER_IPS = ["1.1.1.1", "2.2.2.2"]
 
 def perf_test(
         rd_id,
@@ -34,7 +34,7 @@ def perf_test(
         # If you run multiple perf servers on the same IP with different ports
         # para = append_net_req(para, "34.227.13.37", 5000 + i + 1)
         # If you have set up perf servers on different IPs
-        # para = append_net_req(para, SERVER_IPS[i], 5000)
+        # para = append_net_req(para, PERF_SERVER_IPS[i], 5000)
 
         res = fop.send_one_request(para)
         return res
